@@ -44,6 +44,11 @@ cd $HOME
 git clone https://github.com/zunxbt/rl-swarm.git
 cd rl-swarm
 
+rm -rf hivemind_exp
+git clone --depth 1 https://github.com/gensyn-ai/rl-swarm.git temp-gensyn
+cp -r temp-gensyn/hivemind_exp .
+rm -rf temp-gensyn
+
 echo "📦 Yarn update..."
 cd modal-login
 yarn install
